@@ -1,33 +1,25 @@
-def matParesCol (matriz):
-    
-    vectorPares= []
-    for ren  in range(len(matriz)):
-        contPares = 0
-        for col in range(len(matriz[0])):
-            if (matriz[ren][col] % 2 == 0):
-                contPares += 1
-                
-        vectorPares.append(contPares)        
-       
-    return vectorPares
+def pares_x_columna (matriz):
+    # añadir instrucciones para formar la lista_pares
 
-def leer (ren, col):
+    return lista_pares
+
+def leer_matriz(ren, col):
     matriz = []
-    for x in range (ren):
-        lista = []
-        for y in range(col):
-            valor = int(input())
-            lista.append(valor)
-        matriz.append(lista)
+    # añadir las instrucciones para leer_matriz
+
     return matriz
 
 def main():
+    # 1º Leer la cantidad de renglones y columnas
     ren = int(input())
     col = int(input())
 
-    matriz = leer (ren, col)
-    vectorPares = matParesCol(matriz)
-    print (vectorPares)
+    # 2º Llamar a la función leer que retorna una matriz ingresada del teclado
+    matriz = leer_matriz (ren, col)
+
+    # 3º Llamar pares_x_columna
+    lista_pares = pares_x_columna(matriz)
+    print (lista_pares)
 
 
 if __name__=='__main__':

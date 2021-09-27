@@ -1,30 +1,21 @@
-def generaMatriz (renglon, columna):
+def leer_matriz (renglon, columna):
     matriz = []
-    for i in range (renglon):
-        lista = []
-        for j in range(columna):
-            valor = int(input())
-            lista.append(valor)
-        matriz.append(lista)
+    
     return matriz
 
-def sumaColumnas (matriz):
-    vectorSuma= []
-    for columna  in range(len(matriz[0])):
-        suma = 0
-        for renglon in range(len(matriz)):
-            suma = suma + matriz[renglon][columna]        
-        vectorSuma.append(suma)        
-    return vectorSuma
+def suma_columnas (matriz):
+    lista_suma = []
+
+    return lista_suma
 
 
 def main():
     renglon = int(input())
     columna = int(input())
-    if renglon>=1 and columna>=1:
-        matriz = generaMatriz (renglon, columna)
-        vectorSuma = sumaColumnas(matriz)
-        print (vectorSuma)
+    if renglon >= 1 and columna >= 1:
+        matriz = leer_matriz (renglon, columna)
+        lista_suma = suma_columnas(matriz)
+        print (lista_suma)
     else:
         print("Error")
 
