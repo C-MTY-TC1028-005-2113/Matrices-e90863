@@ -20,3 +20,7 @@ def main():
         print(lista_suma)
     else:
         print("Error")
+        
+ 
+if __name__=='__main__':
+    main()
